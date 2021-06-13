@@ -7,6 +7,6 @@ I was pretty confused initially, and didn't even know where to start. It took me
 
 I believe the resulting webpage fulfills all criteria for this assignment.
 
-I completed this lab completely on my own, only consulting Piazza, resources linked on Piazza, and Moz://a, and W3schools.
+I completed this lab completely on my own, only consulting Piazza, resources linked on Piazza, and Mozilla, and W3schools.
 
 This lab was completed in roughly 4 hours.
