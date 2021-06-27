@@ -96,14 +96,42 @@ function success(pos) {
         strokeOpacity: 1.0,
         strokeWeight: 2,
       });
+
+
+
+
+
+
+
+
+
     }
   }
 
 
 
   xhr.send(params);
-
+  // var request = {
+  //     location: current,
+  //     radius: 1609,
+  //     type: "restaurant"
+  //       };
+  // var service = new google.maps.places.PlacesService(map);
+  // service.nearbySearch(request, callback);
+  // function callback(results, status) {
+  //     if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //       console.log(results);
+  //         for (count = 0; count < results.length; count++) {
+  //             var marker_restaurant = new google.maps.Marker({
+  //               position: { lat: parseFloat(results[count].geometry.location.lat) , lng: parseFloat(results[count].geometry.location.lng) },
+  //               map: map,
+  //             });
+  //
+  //             }
+  // }
+  // }
 
 }
 navigator.geolocation.getCurrentPosition(success, error, options);
+
 }
