@@ -33,7 +33,8 @@ function success(pos) {
   //HTTP Request
   var username = 'srm75o31';
   var xhr = new XMLHttpRequest();
-  var url = 'https://jordan-marsh.herokuapp.com/rides';
+  // var url = 'https://jordan-marsh.herokuapp.com/rides';
+  var url = 'https://arctic-leaf-60533.herokuapp.com/rides'
   var params = "username="+username+"&lat="+crd.latitude+"&lng="+crd.longitude;
   xhr.open('POST', url, true);
 
@@ -47,7 +48,7 @@ function success(pos) {
       if(xhr.readyState == 4 && xhr.status == 200) {
           // console.log(xhr.responseText);
           var jsonData = JSON.parse(xhr.responseText);
-          // console.log(jsonData);
+          console.log(jsonData);
           //Loop for each car
           var closestDistanceMeters = 999999999999999999;
           var closestCar = "";
@@ -96,41 +97,9 @@ function success(pos) {
         strokeOpacity: 1.0,
         strokeWeight: 2,
       });
-
-
-
-
-
-
-
-
-
     }
   }
-
-
-
   xhr.send(params);
-  // var request = {
-  //     location: current,
-  //     radius: 1609,
-  //     type: "restaurant"
-  //       };
-  // var service = new google.maps.places.PlacesService(map);
-  // service.nearbySearch(request, callback);
-  // function callback(results, status) {
-  //     if (status == google.maps.places.PlacesServiceStatus.OK) {
-  //       console.log(results);
-  //         for (count = 0; count < results.length; count++) {
-  //             var marker_restaurant = new google.maps.Marker({
-  //               position: { lat: parseFloat(results[count].geometry.location.lat) , lng: parseFloat(results[count].geometry.location.lng) },
-  //               map: map,
-  //             });
-  //
-  //             }
-  // }
-  // }
-
 }
 navigator.geolocation.getCurrentPosition(success, error, options);
 
