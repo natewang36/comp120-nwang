@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+  <link rel="stylesheet" href="index_style.css" />
+  <link rel="stylesheet" href="fonts.css" />
+  <title>The Hacking Droid</title>
+  </head>
+
+<body>
+
+<div class="textcontainer">
+  <!-- <h1>Introduction</h1> -->
+<div class="label">
+<label>Your website sucks!</label>
+</div>
+<br>
+  <img src="images/R2.png" alt="Badass Space Robot" style="width:10vw;">
+  <h1>Hi! I'm R2-D2</h1>
+  <h2>To put it simply, I'm an astromech droid from a future. In my time, you humans are on the brink of extinction due to your sheer incompetence. <br>I'm back here to set you straight! Hello!</h2>
+  <h2>I've been tasked with analyzing the security of your website, and it is really, really bad. I broke it down into three main concerns. Take a look!</h2>
+  <br><br><br>
+  <div class=whitebackground>
+    <br>
+    <h3>Concern #1: Lack of input verification</h3>
+    <h4>The user's input is only passed through the bare minimum of filters. As long as the username is defined, and the coordinates are numbers (it doesn't matter if the coordinates don't exist on Earth), the POST function complies! Using this security breach, I was able to clog up your webpage (https://jordan-marsh.herokuapp.com/) with random strings and characters. Once I figured out how to insert line breaks and images, the interface became a mess!</h4>
+    <img src="1.png" alt="Crazy input" style="width:30vw;">
+    <br><h4>Theoretically, I could input a username consisting of 10 million blank spaces. Whoever visits your website afterwards would have to scroll down a significant amount to get to any readable content!</h4>
+    <br><h4>We can fix this by passing the user inputs through more filters. One example would be a filter that only allows usernames under 20 characters.</h4>
+
+    <h3>Concern #2: No time limit to requests</h3>
+    <h4>To put it simply, I was able to spam this page with requests. I even had 3 Terminal windows open at once, and I was switching between them, requesting as fast as possible. There is no limit!</h4>
+    <br><h4>This may not be a problem, since I am only a single droid. However, if I were to bring my associates, and we were to all send hundreds of requests every minute, your webpage can easily be overloaded.</h4>
+    <img src="2.png" alt="Speedrun!" style="width:50vw;">
+    <br><h4>A straightforward solution to this problem would be to require a non-changeable method of identification from the client, such as their IP address. Each unique IP address could be limited to making only a certain number of requests per minute. There are obvious workarounds to this, such as a VPN, but switching IP addresses with a VPN, or turning a VPN on or off all take time, and the method will still accomplish the goal of slowing down requests.</h4>
+
+    <h3>Concern #3: Files can be uploaded</h3>
+    <h4>Your users are able to upload files to whatever database you are using to house this site. If you were to encounter more individuals with ill-intent, a simple curl command is all they would need to fill your database with random files of Fast and Furious memes, Obi-Wan Kenobi selfies, and Harry Potter scenes. </h4>
+    <br><h4>As these files begin to pile up, the site's loading time will begin to increase. If enough files are added, the website may take minutes to load, or even crash (like it just did!)</h4>
+    <img src="3.png" alt="Application Error!" style="width:30vw;">
+    <br><h4>This can be prevented by limiting the request parameters. Rather than just requiring a username, latitude, and longitude, ensure that the user is just posting those parameters, and nothing else. These hackers are using their seemingly innocent requests as Trojan Horses to sneak in their contraband!</h4>
+<br><br>
+  </div>
+</div>
+</body>
